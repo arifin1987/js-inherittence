@@ -11,6 +11,13 @@ class Vehicle{
 }
 
 
-let car1 = new Vehicle('Toyota', 'Corola', 'blue');
+class Customer extends Vehicle{
+    constructor(name, model,color,phone, memberShip){
+        super(name,model,color);
+        this.phone = phone;
+        this.memberShip = memberShip;
+    }
+}
 
-console.log(car1.getCarInfo());
+let customer1 = new Customer('toyota','2000','black','1234','yes');
+console.log(customer1);
